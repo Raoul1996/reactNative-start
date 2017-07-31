@@ -4,13 +4,25 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
-} from 'react-native';
+  View,
+  Image
+} from 'react-native'
+class Banner extends Component {
+  render() {
+    const pic = {
+      uri: 'http://otyhnrezy.bkt.clouddn.com/gakki.gif'
+    }
+    return (
+        <Image source={pic} style={styles.banner}/>
+
+    )
+  }
+}
 
 export default class AwesomeProject extends Component {
   render() {
@@ -19,12 +31,7 @@ export default class AwesomeProject extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <Text style={styles.welcome}>
-          加油，matlab很大
-        </Text>
-        <Text style={styles.instructions}>
-          不要急，可以去玩玩手机什么的嘛
-        </Text>
+        <Banner/>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
         </Text>
@@ -33,7 +40,7 @@ export default class AwesomeProject extends Component {
           Shake or press menu button for dev menu
         </Text>
       </View>
-    );
+    )
   }
 }
 
@@ -42,18 +49,22 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
+  },
+  banner:{
+    width:"100%",
+    height:360
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5,
-  },
-});
+    marginBottom: 5
+  }
+})
 
-AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject)
