@@ -6,12 +6,15 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "dev": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
-    "commit":"git add . && git commit",
-    "pull":"git stash && git pull --rebase && git stash pop"
+    "commit": "git add . && git commit",
+    "pull": "git stash && git pull --rebase && git stash pop",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "react": "16.0.0-alpha.12",
-    "react-native": "0.46.4"
+    "react-native": "0.46.4",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
@@ -21,5 +24,6 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "snyk": true
 }
