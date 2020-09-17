@@ -10,7 +10,7 @@
     "pull":"git stash && git pull --rebase && git stash pop"
   },
   "dependencies": {
-    "react": "16.0.0-alpha.12",
+    "react": "16.0.0",
     "react-native": "0.46.4"
   },
   "devDependencies": {
